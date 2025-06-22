@@ -51,26 +51,3 @@
   background: #c8c8d4;
   cursor: not-allowed;
 }
-
-.success-message, .error-message {
-  margin-top: 2rem;
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  min-width: 340px;
-  display: flex;
-  align-items: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  gap: 0.7rem;
-}
-
-.success-message {
-  background: #eafbf3;
-  color: #218838;
-  border: 1.5px solid #bff0d2;
-}
-.error-message {
-  background: #ffeaea;
-  color: #b02a37;
-  border: 1.5px solid #ffb3b3;
-}

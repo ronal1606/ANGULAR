@@ -11,23 +11,16 @@ import { EmailService } from '../../services/email.service';
 })
 export class EmailFormComponent {
   email: string = '';
-  respuesta: string = '';
-  error: string = '';
 
   constructor(private emailService: EmailService) {}
 
   enviar() {
-    this.respuesta = '';
-    this.error = '';
     this.emailService.enviarEmail(this.email).subscribe({
       next: (res) => {
-        this.respuesta = res.message || '¡Correo enviado correctamente!';
-        this.email = '';
+        alert('Respuesta de Laravel: ' + JSON.stringify(res));
       },
       error: (err) => {
-        this.error =
-          err?.error?.message ||
-          'Ocurrió un error. Revisa el email y vuelve a intentarlo.';
+        alert('Error: ' + JSON.stringify(err.error));
       }
     });
   }
