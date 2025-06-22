@@ -11,4 +11,11 @@
     />
     <button type="submit" [disabled]="form.invalid">Enviar</button>
   </form>
+
+  <div *ngIf="respuesta" class="success-message">
+    <strong>✔</strong> {{ respuesta }}
+  </div>
+  <div *ngIf="error" class="error-message">
+    <strong>✖</strong> {{ error }}
+  </div>
 </div>
